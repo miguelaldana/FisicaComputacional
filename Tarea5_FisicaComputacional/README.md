@@ -16,4 +16,4 @@ Punto 1: se encuentra en punto_1_encefalograma.ipynb
 Punto 2: se encuentra en Manchassolares.ipynb y modulo_manchas_solares.py 
 	Para este punto, se debe correr el archivo Machassolaes.ipynb en el notebook y asegurarse de que esté el archivo modulo_manchas_solares.py para que funcione correctamente. De esta manera, se obtendrán los resultados mostrados en el informe, en la pantalla del notebook
 
-Informe: informe de resultados
+Informe: informe de los resultados con gráficas
