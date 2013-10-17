@@ -158,11 +158,10 @@ def espectro_potencias(freqConst, fft_x_Const, freqLin, fft_x_Lin, freqCub, fft_
     Output:
     - grafica el espectro de potencias de las tres interpolaciones
     """
-    plt.plot(freqConst,np.abs(fft_x_Const)**2,'.')
-    plt.plot(freqLin,np.abs(fft_x_Lin)**2,'.',color = 'green',)
-    plt.plot(freqCub,np.abs(fft_x_Cub)**2,'.',color = 'red')
+    plt.plot(freqConst,np.log(np.abs(fft_x_Const)**2),'.',color = 'blue')
+    plt.plot(freqLin,np.log(np.abs(fft_x_Lin)**2),'.',color = 'green',)
+    plt.plot(freqCub,np.log(np.abs(fft_x_Cub)**2),'.',color = 'red')
     plt.xlim(-1.5,1.5)
-    plt.ylim(-1.5,300)
     plt.legend(['Interpolacion Constante','Interpolacion Lineal','Interpolacion Cubica'])
     params = {'legend.fontsize': 9,
 	  'legend.linewidth': 2}
@@ -215,7 +214,7 @@ def manchas_reconstruidas(ampl_ajustada,datos_Manchas,tipo_Recons):
     
     mediciones = datos_Manchas[:,1]
     manchas_recons = ifft(ampl_ajustada*len(mediciones))
-    plt.plot(datos_Manchas[:,0],mediciones,color='green')
+    plt.plot(datos_Manchas[:,0],mediciones,color='blue')
     plt.plot(datos_Manchas[:,0],np.abs(manchas_recons),color='green')
     recons = "Reconstruccion " + tipo_Recons 
     plt.legend(['Datos Reales',recons])
