@@ -13,7 +13,7 @@
     - vy: velocidad inicial en y del centro de la galaxia (double)
 
     Output:
-    - Archivo de texto con condiciones iniciales (posicion y velocidades) de cada particula
+    - Archivo de texto con condiciones iniciales (posicion y velocidades) de cada particula y el centro de la galaxia: columna_1 = x, columna_2 = y, columna_3 = v_x, columna_4 = v_y
 
 **/
 
@@ -110,6 +110,8 @@ if(argc!= 4)
  int i;
 
  in = fopen(filename,"w");
+ fprintf(in,"%f %f %f %f\n", x0, y0, vz, vy);
+ fclose(in);
 
  for (i=0;i<12;i++)
    {
