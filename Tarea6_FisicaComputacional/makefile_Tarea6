@@ -1,9 +1,12 @@
-all: a.out plots.py
+all: evolve.out IC.out plots
 
-a.out:	evolve.c IC.c 
-	cc evolve.c IC.c -lm
+evolve.out:	evolve.c 
+		cc evolve.c -lm
 
-plots.py: plots.py
-	python plots.py
+IC.out:		IC.c
+		cc IC.c -lm
+
+plots:	 	plots.py
+		python plots.py
 
 
