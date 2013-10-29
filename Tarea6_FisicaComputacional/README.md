@@ -12,4 +12,4 @@ Fecha:
 
 		7 de noviembre del 2013
 
-NOTA: no supe eliminar los archivos "datos_iniciales.c" y "rungekutta.c" así que por favor no prestar atención a estos.
+NOTA: la mayoria de los metodos se encuentran incompletos
