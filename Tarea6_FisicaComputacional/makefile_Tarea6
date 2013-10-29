@@ -1,10 +1,10 @@
 all: evolve.out IC.out plots
 
 evolve.out:	evolve.c 
-		cc evolve.c -lm
+		cc evolve.c -lm -o evolve.out
 
 IC.out:		IC.c
-		cc IC.c -lm
+		cc IC.c -lm -o IC.out
 
 plots:	 	plots.py
 		python plots.py
