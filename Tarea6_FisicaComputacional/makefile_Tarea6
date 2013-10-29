@@ -1,0 +1,9 @@
+all: a.out plots.py
+
+a.out:	evolve.c IC.c 
+	cc evolve.c IC.c -lm
+
+plots.py: plots.py
+	python plots.py
+
+
