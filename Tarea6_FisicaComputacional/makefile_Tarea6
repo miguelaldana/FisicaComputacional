@@ -1,12 +1,17 @@
-all: evolve.out IC.out plots
-
-evolve.out:	evolve.c 
-		cc evolve.c -lm -o evolve.out
+all: IC.out cat.o evolve.out plots
 
 IC.out:		IC.c
 		cc IC.c -lm -o IC.out
+		./IC.out 0.0 0.0 0.0 0.0
 
-plots:	 	plots.py
+cat.o:
+		cat Condiciones_iniciales.dat Condiciones_iniciales_2.dat > Condiciones_iniciales_3.dat
+
+evolve.out:	evolve.c
+		cc evolve.c -lm -o evolve.out
+		./evolve.out Condiciones_iniciales.dat
+
+plots:		plots.py
 		python plots.py
 
 
